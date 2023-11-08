@@ -1,4 +1,12 @@
-n1 = input()
-n2 = n1[::-1]
-password = str(int(n1) + int(n2))
-print("YES" if password == password[::-1] else "NO")
+n = input()  # 숫자를 문자열로 입력받음
+
+rev_n = n[::-1]  # 입력받은 숫자를 뒤집은 문자열을 생성
+
+# 입력된 숫자와 뒤집은 숫자를 정수로 변환하고 두 숫자를 더함
+sum = int(n) + int(rev_n)
+
+# 합계가 팰린드롬인지 확인하기 위해, 합계를 문자열로 변환하고 그 문자열을 뒤집은 것과 비교
+if str(sum) == str(sum)[::-1]:
+    print("YES")  # 팰린드롬이면 "YES" 출력
+else:
+    print("NO")  # 팰린드롬이 아니면 "NO" 출력
